@@ -3,7 +3,12 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "engines": {
+    "node": "8.1.1",
+    "npm": "5.0.3"
+  },
   "scripts": {
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -15,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/chris-daynes/skinDoc/issues"
   },
-  "homepage": "https://github.com/chris-daynes/skinDoc#readme"
+  "homepage": "https://github.com/chris-daynes/skinDoc#readme",
+  "dependencies": {
+    "express": "^4.16.2"
+  }
 }
