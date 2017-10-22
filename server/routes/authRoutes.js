@@ -5,7 +5,11 @@ module.exports = (app) => {
     passport.authenticate('google', { scope: ['profile', 'email'] }));
   
   app.get('/auth/google/callback', 
-    passport.authenticate('google'))
+    passport.authenticate('google'),
+    function(req, res) {
+      res.redirect('/');
+    }
+  )
   
   app.get('/api/current_user', (req, res) => {
     res.send(req.user);
