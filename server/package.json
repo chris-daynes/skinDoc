@@ -8,20 +8,23 @@
     "npm": "5.0.3"
   },
   "scripts": {
-    "start": "node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon index.js",
+    "dev": "nodemon index.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/chris-daynes/skinDoc.git"
   },
-  "author": "",
+  "author": "Chris Daynes",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/chris-daynes/skinDoc/issues"
   },
   "homepage": "https://github.com/chris-daynes/skinDoc#readme",
   "dependencies": {
-    "express": "^4.16.2"
+    "express": "^4.16.2",
+    "mongoose": "^4.12.3",
+    "passport": "^0.4.0",
+    "passport-google-oauth20": "^1.0.0"
   }
 }
