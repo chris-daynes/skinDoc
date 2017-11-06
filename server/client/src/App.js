@@ -17,7 +17,6 @@ class App extends Component {
         <div className="App">
           <AppBar
             title="SkinDoc"
-            iconClassNameRight="muidocs-icon-navigation-expand-more"
             iconElementRight={<GoogleLoginButton />}
           />
           
