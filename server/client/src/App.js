@@ -1,20 +1,41 @@
 import React, { Component } from 'react';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import logo from './logo.svg';
+import AccountIcon from 'material-ui/svg-icons/action/account-box'
 import './App.css';
+
+import AppBar from 'material-ui/AppBar'
+import RaisedButton from 'material-ui/RaisedButton';
+import injectTapEventPlugin from 'react-tap-event-plugin'
+
+injectTapEventPlugin()
+
+const styles = {
+  button: {
+    margin: 12,
+  }
+}
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a href='/auth/google'>Sign in with Google</a>
-      </div>
+      <MuiThemeProvider>
+        <div className="App">
+          <AppBar
+            title="SkinDoc"
+            iconClassNameRight="muidocs-icon-navigation-expand-more"
+          />
+          <RaisedButton
+            label="Sign in with Google"
+            labelPosition="before"
+            style={styles.button}
+            containerElement="label"
+            href='/auth/google'
+            icon={<AccountIcon/>}
+          >
+          </RaisedButton>
+        </div>
+      </MuiThemeProvider>
     );
   }
 }
